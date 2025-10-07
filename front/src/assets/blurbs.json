@@ -1,0 +1,31 @@
+[
+
+    {
+        "type": "Deductible",
+        "blurb": "Deductible does/does not apply."
+    },
+    {
+        "type": "One Copay per DOS",
+        "blurb": "One copay applies per date of service."
+    },
+    {
+        "type": "Prior Auth",
+        "blurb": "Prior authorization is/is not required."
+    },
+    {
+        "type": "Prior Auth (Confirmed w/TWO reps)",
+        "blurb": "Prior authorization is/is not required. This was confirmed by ____(ref#) and ____(ref#)."
+    },
+    {
+        "type": "Not Covered (Medical)",
+        "blurb": "This product is not covered under the member's medical benefits."
+    },
+    {
+        "type": "Not Covered (Pharmacy)",
+        "blurb": "This product is not covered under the member's pharmacy benefits."
+    },
+    {
+        "type": "Third party",
+        "blurb": "Due to third party restrictions, we were unable to verify coverage for this product."
+    }
+]

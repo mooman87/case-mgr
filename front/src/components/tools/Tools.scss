@@ -1,0 +1,61 @@
+@import "../../style/mixins.scss";
+
+.tools-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 1.5rem;
+    margin: 1.5rem 0;
+    
+}
+
+.tools {
+  @include card();
+  margin: 1.5rem 0;
+
+  .title,
+  .description,
+  .code {
+    margin-bottom: 1rem;
+    
+  }
+
+  .code {
+    padding: 0.5rem;
+    border-radius: 5px;
+    background: var(--dark-color);
+    font-family: monospace;
+    font-size: 1.3rem;
+    white-space: pre-wrap;
+  }
+
+  .add-blurb, .copy-blurb {
+    display: flex;
+    justify-content: end;
+  }
+
+  .Add, .Copy {
+    background-color: var(--primary-color);
+    color: var(--text-light-color);
+  }
+
+  .Add:hover {
+    background-color: var(--primary-color);
+    box-shadow: var(--box-shadow);
+  }
+
+  .btn-delete,
+  .btn-search {
+    @include btn();
+    margin-right: 1rem;
+  }
+
+  .btn-search {
+    background: var(--primary-color);
+    color: var(--text-light-color);
+  }
+
+  .btn-delete {
+    background: var(--danger-color);
+    color: var(--text-light-color);
+  }
+}
