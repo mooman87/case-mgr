@@ -24,7 +24,7 @@ async function ensureDb() {
 }
 app.use(async (_req, _res, next) => { await ensureDb(); next(); });
 
-// Mount your existing routers (unchanged code)
+
 app.use('/auth', require('../../back/routers/userRouter'));
 app.use('/cases', require('../../back/routers/caseRouter'));
 

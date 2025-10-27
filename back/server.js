@@ -11,7 +11,7 @@ const app = express();
 
 app.use(express.json());
 app.use(cors({
-    origin: ['http://localhost:3000', 'https://casemanager.netlify.app'],
+    origin: ['http://localhost:3000', 'https://casemgr.netlify.app'],
     credentials: true,
     allowedHeaders: ['Access-Control-Allow-Origin', 'content-type']
 }));
