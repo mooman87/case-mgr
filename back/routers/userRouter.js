@@ -42,7 +42,7 @@ router.post("/register", async (req, res) => {
     const token = jwt.sign({ id: savedUser._id }, process.env.JWT_SECRET);
 
     res.cookie("token", token, authCookieOptions());
-    return res.status(201).send();       // ✅ ensure we actually respond
+    return res.status(201).send();      
   } catch (err) {
     console.log(err);
     return res.status(500).send();
@@ -70,7 +70,7 @@ router.post("/login", async (req, res) => {
     const token = jwt.sign({ id: existingUser._id }, process.env.JWT_SECRET);
 
     res.cookie("token", token, authCookieOptions());
-    return res.send();                    // ✅ respond after setting cookie
+    return res.send();                    
   } catch (err) {
     console.log(err);
     return res.status(500).send();
@@ -83,7 +83,7 @@ router.get("/loggedIn", (req, res) => {
     if (!token) return res.json(null);
 
     const validatedUser = jwt.verify(token, process.env.JWT_SECRET);
-    return res.json(validatedUser.id);    // matches your frontend’s expectation
+    return res.json(validatedUser.id);
   } catch (err) {
     return res.json(null);
   }
