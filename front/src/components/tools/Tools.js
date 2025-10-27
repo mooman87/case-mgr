@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import './Tools.scss';
 import Zip2Terr from "./Zip2Terr";
 import BlurbGenerator from "./BlurbGenerator";
