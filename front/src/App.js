@@ -4,6 +4,7 @@ import { UserContextProvider } from "./context/UserContext";
 import Router from "./Router";
 import "./style/index.scss";
 
+Axios.defaults.baseURL = "";
 Axios.defaults.withCredentials = true;
 
 function App() {

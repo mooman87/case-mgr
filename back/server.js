@@ -18,8 +18,8 @@ app.use(cors({
 
 app.use(cookieParser());
 
-app.listen(process.env.PORT || 9050, () => {
-    console.log(`Listening on port ${process.env.PORT || 9050}`);
+app.listen(9050, () => {
+    console.log(`Listening on port ${9050}`);
 });
 
 app.use('/cases', require('./routers/caseRouter'));

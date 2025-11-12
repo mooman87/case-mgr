@@ -1,4 +1,7 @@
-const mongoose = require('mongoose');
+const mongoose = require("../db/mongoose");
+
+
+
 
 const userSchema = new mongoose.Schema(
     {
@@ -9,6 +12,8 @@ const userSchema = new mongoose.Schema(
     timestamps: true
     }
 );
+
+
 
 const User = mongoose.model('user', userSchema);
 

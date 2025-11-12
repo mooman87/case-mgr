@@ -1,13 +1,7 @@
-[build]
-  base = ""                         # repo root
-  publish = "front/build"           # CRA build output
-  command = "npm ci && npm --prefix front ci && npm --prefix front run build"
-
 [functions]
   directory = "netlify/functions"
   node_bundler = "esbuild"
 
-# API proxies (hit the function first)
 [[redirects]]
   from = "/auth/*"
   to = "/.netlify/functions/app/auth/:splat"
@@ -18,7 +12,6 @@
   to = "/.netlify/functions/app/cases/:splat"
   status = 200
 
-# SPA fallback (AFTER API redirects)
 [[redirects]]
   from = "/*"
   to = "/index.html"
